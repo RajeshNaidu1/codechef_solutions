@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t,a[26], sum;
+	string s;
+    bool flag;
+	cin>>t;
+	while(t--){
+	   for(int i=0;i<26;i++){
+	       cin>>a[i];
+	   } 
+	   cin>>s;
+	   sum=0;
+	   for(int i=0;i<26;i++){
+	       flag=false;
+	       for(int j=0;j<s.length();j++){
+	       if(int(s[j])==i+97){
+	           flag=true;
+	       }
+	       }
+	       if(flag==false){
+	           sum=sum+a[i];
+	           
+	       }
+	   } 
+	   cout<<sum<<endl;
+	}
+	return 0;
+}
